@@ -1,12 +1,12 @@
 [Unit]
-Description=Kibana - dashboard for Elasticsearch
+Description=Kibana 5 - dashboard for Elasticsearch
 After=network.target elasticsearch.service
 
 [Service]
 User=kibana
 Group=kibana
 Environment="NODE_ENV=production"
-ExecStart=/usr/bin/node --max-old-space-size=512 /usr/share/kibana/src/cli --config=/etc/kibana/kibana.yml
+ExecStart=/usr/bin/node --max-old-space-size=512 /usr/share/kibana5/src/cli --config=/etc/kibana5/kibana.yml
 PrivateTmp=true
 NoNewPrivileges=true
 Restart=always
